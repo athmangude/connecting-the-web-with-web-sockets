@@ -42,8 +42,13 @@ var messages = [
 ];
 
 io.on('connection', function(socket) {
-    console.log('something connected to Socket.io');
+    console.log('something conn  ected to Socket.io');
     socket.emit('messages', messages);
+
+    socket.on('new-message', function(data) {
+        messages.push(data);
+        io.sockets.emit('messages', messages);
+    });
 });
 
 server.listen('8080');
