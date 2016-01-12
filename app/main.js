@@ -14,3 +14,18 @@ socket.on('messages', function(data) {
 
     document.getElementById('messages').innerHTML = html;
 });
+
+function addMessage(event) {
+    // console.log(event);
+    var payLoad = {
+        userName: document.getElementById('username').value,
+        content: {
+            text: document.getElementById('message').value,
+            link: document.getElementById('linkAddress').value
+        },
+        ts: Date.now()
+    };
+
+    socket.emit('new-message', payLoad);
+    return false;
+}
