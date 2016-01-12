@@ -3,10 +3,7 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
-app.get('/', function(request, response) {
-    response.send('Hello World');
-    console.log('something connected to express');
-});
+app.use(express.static('app'));
 
 io.on('connection', function(socket) {
     console.log('something connected to Socket.io');
