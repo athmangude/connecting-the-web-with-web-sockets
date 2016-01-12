@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Connecting the World with Web Sockets</title>
+        <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            var socket = io.connect('http://localhost:8080', {
+                forceNew: true
+            });
+        </script>
+    </head>
+    <body>
+        Web Socket App: Hello World
+    </body>
+</html>
