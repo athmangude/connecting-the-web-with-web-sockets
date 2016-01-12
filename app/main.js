@@ -1,5 +1,13 @@
 var socket = io.connect('http://localhost:8080', {forceNew: true});
 
+var userId = localStorage.getItem('userId') || randomUserId();
+localStorage.setItem('userId', userId);
+console.log('user #', userId);
+
+function randomUserId() {
+    return Math.floor(Math.random() * 1e11);
+}
+
 socket.on('messages', function(data) {
     console.info(data);
 
