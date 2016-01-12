@@ -9,5 +9,18 @@
     <body>
         <h1>Web Socket App: Hello World</h1>
         <div class="" id="messages"></div>
+
+        <form class="" onSubmit="return addMessage(this)">
+            <div class="username">
+                <input type="text" name="username" id="username" placeholder="your name" value="Guest" required>
+            </div>
+            <div class="link">
+                <input type="text" name="linkAddress" id="linkAddress" placeholder="link" value="" required>
+            </div>
+            <div class="message-input">
+                <textarea type="text" name="message" id="message" placeholder="your message" value="" required></textarea>
+            </div>
+            <input class="sendMessageButton" type="submit" name="submit-button" value="Send!">
+        </form>
     </body>
 </html>
