@@ -1,0 +1,25 @@
+{
+  "name": "connecting-the-web-with-web-sockets",
+  "description": "Getting started with Web Sockets",
+  "main": "app.js",
+  "authors": [
+    "Athman Gude"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "sockets",
+    "web",
+    "sockets",
+    "real-time",
+    "web"
+  ],
+  "homepage": "https://github.com/athmangude/connecting-the-web-with-web-sockets",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
